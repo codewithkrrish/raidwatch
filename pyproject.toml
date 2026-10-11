@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raidwatch"
+version = "0.1.0"
+description = "Anti-raid cog for discord.py bots: sliding-window join-velocity detection with auto-lockdown and dry-run tuning."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Krrish" }]
+keywords = ["discord", "discord.py", "anti-raid", "moderation", "bot", "security"]
+dependencies = ["discord.py>=2.3"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Communications :: Chat",
+  "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+raidwatch-sim = "raidwatch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/codewithkrrish/raidwatch"
+
+[tool.setuptools.packages.find]
+include = ["raidwatch*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

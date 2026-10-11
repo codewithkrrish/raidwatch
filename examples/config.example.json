@@ -1,0 +1,1 @@
+{"alert_channel_id":null,"auto_unlock_minutes":0,"cooldown_minutes":30,"dry_run":true,"join_threshold":10,"lockdown_strategy":"channel_lock","staff_role_id":null,"trusted_account_age_days":7,"window_seconds":15}
